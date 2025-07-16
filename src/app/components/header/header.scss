@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+
+  background-color: var(--p-color-primary);
+
+  &__img {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__nav {
+    &__list {
+      display: flex;
+      list-style: none;
+
+      &__item {
+        padding: 8px 12px;
+        color: var(--p-color-primary-contrast);
+      }
+    }
+  }
+}
