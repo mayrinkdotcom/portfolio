@@ -1,18 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'p-header',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
 export class Header {
-
-  router = inject(Router);
+  navigationService = inject(NavigationService);
 
   goTo(path: string) {
-    this.router.navigate([path]);
+    this.navigationService.goTo(path);
   }
 
 }

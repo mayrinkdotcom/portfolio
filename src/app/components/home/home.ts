@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'p-home',
@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
 })
 export class Home {
 
-  router = inject(Router)
+  navigationService = inject(NavigationService);
 
   navigateToNextPage() {
-    this.router.navigate(['/intro'])
+    this.navigationService.goTo('/intro');
   }
 
 }
