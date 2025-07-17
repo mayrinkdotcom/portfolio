@@ -1,25 +1,25 @@
 <div class="header">
-  <img class="header__img" src="angular-logo.png" alt="logo" (click)="navigateToHome()">
+  <img class="header__img" src="angular-logo.png" alt="logo" (click)="goTo('/')">
 
   <nav class="header__nav">
     <ul class="header__nav__list">
-      <li class="header__nav__list__item active">
+      <li class="header__nav__list__item active" (click)="goTo('/intro')">
         <span class="header__nav__list__item--text">quem sou eu</span>
       </li>
 
-      <li class="header__nav__list__item">
+      <li class="header__nav__list__item" (click)="goTo('/skills')">
         <span class="header__nav__list__item--text">skills</span>
       </li>
 
-      <li class="header__nav__list__item">
+      <li class="header__nav__list__item" (click)="goTo('/projects')">
         <span class="header__nav__list__item--text">projetos</span>
       </li>
 
-      <li class="header__nav__list__item">
+      <li class="header__nav__list__item" (click)="goTo('/blog')">
         <span class="header__nav__list__item--text">blog</span>
       </li>
 
-      <li class="header__nav__list__item">
+      <li class="header__nav__list__item" (click)="goTo('/contacts')">
         <span class="header__nav__list__item--text">contatos</span>
       </li>
     </ul>

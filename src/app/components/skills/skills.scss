@@ -1,0 +1,62 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: var(--p-color-light);
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  &-list {
+    display: grid;
+    width: 800px;
+    height: 640px;
+
+    .sublist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--color-background);
+
+      &:hover {
+        background-color: var(--color-hover);
+        cursor: pointer;
+      }
+
+      img {
+        width: 40px;
+        margin-right: 10px;
+      }
+
+      &.skill-tier1 img {
+        width: 320px;
+      }
+
+      &.skill-tier2 img {
+        width: 160px;
+      }
+
+      &.skill-tier3 img {
+        width: 80px;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  p-skills {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    animation: appear 0.3s ease-out;
+  }
+}

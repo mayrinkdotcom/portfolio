@@ -11,8 +11,8 @@ export class Header {
 
   router = inject(Router);
 
-  navigateToHome() {
-    this.router.navigate(['/']);
+  goTo(path: string) {
+    this.router.navigate([path]);
   }
 
 }
