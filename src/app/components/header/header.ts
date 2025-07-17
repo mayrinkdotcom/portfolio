@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'p-header',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss'
 })
 export class Header {
+
+  router = inject(Router);
+
+  navigateToHome() {
+    this.router.navigate(['/']);
+  }
 
 }
